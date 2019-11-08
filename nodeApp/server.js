@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => { res.send("Hello World") })
-
+// Request to create a new fruit
 app.post("/createFruit", (req, res) => {
     var data = req.body;
 
@@ -37,7 +37,7 @@ app.post("/createFruit", (req, res) => {
     // res.json({message:"Welcome to Create Fruit page"})
 
 })
-
+// Request to change fruit's owner
 app.post("/changeFruitOwner", (req, res) => {
     var data = req.body;
 
@@ -66,7 +66,7 @@ app.post("/changeFruitOwner", (req, res) => {
 })
 
 
-
+// Request to change fruit's name
 app.post("/changeFruitName", (req, res) => {
     var data = req.body;
 
@@ -95,7 +95,7 @@ app.post("/changeFruitName", (req, res) => {
     // res.json({message:"Welcome to Create Fruit page"})
 
 })
-
+// Get request to get entire history of fruit
 app.get("/getHistory/:fruit_id",(req,res) => {
     var fruitId = req.params.fruit_id;
 
@@ -117,7 +117,7 @@ app.get("/getHistory/:fruit_id",(req,res) => {
 
 })
 
-
+// get request to query fruit
 app.get("/queryFruit/:fruit_id", (req, res) => {
 
     var fruitId = req.params.fruit_id;
